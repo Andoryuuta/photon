@@ -47,7 +47,7 @@ func DebugPrint(rdr io.ReadSeeker) error {
 
 	var thumbnailHeader binCompatPreviewHeader
 
-	rdr.Seek(int64(header.PreviewthumbnailHeaderOffset), io.SeekStart)
+	rdr.Seek(int64(header.PreviewThumbnailHeaderOffset), io.SeekStart)
 	err = binary.Read(rdr, binary.LittleEndian, &thumbnailHeader)
 	if err != nil {
 		return err
@@ -112,7 +112,7 @@ func Read(rdr io.ReadSeeker) error {
 
 	var thumbnailHeader binCompatPreviewHeader
 
-	rdr.Seek(int64(header.PreviewthumbnailHeaderOffset), io.SeekStart)
+	rdr.Seek(int64(header.PreviewThumbnailHeaderOffset), io.SeekStart)
 	err = binary.Read(rdr, binary.LittleEndian, &thumbnailHeader)
 	if err != nil {
 		return err

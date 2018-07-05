@@ -2,12 +2,8 @@ package photon
 
 import (
 	"encoding/binary"
-	"fmt"
 	"image"
-	"image/png"
 	"io"
-	"io/ioutil"
-	"os"
 )
 
 type PhotonFile struct {
